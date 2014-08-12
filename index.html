@@ -6,23 +6,23 @@ title: The iconic foundry design blog
     ================================================== -->
   <div class="content">
     <main class="container">
-    	<div class="row-fluid">
-    		<section class="content">
-    		  <h1>Ipsum List</h1>
-          <div class="sub-title">A list of interesting lorem ipsums I found on the web</div>
-    		</section>
-    		<ul class="entries">
-    		{% for post in paginator.posts %}
-    		  <li>
-    		    <a href="{{ post.url }}">
-    		        <h3>{{ post.title }}</h3>
+      <div class="row-fluid">
+        <section class="content">
+          <h1>The iconic foundry</h1>
+          <div class="sub-title">Design blog</div>
+        </section>
+        <ul class="entries">
+        {% for post in paginator.posts %}
+          <li>
+            <a href="{{ post.url }}">
+                <h3>{{ post.title }}</h3>
                 <time>{{ post.date | date: "%d %B %Y" }}</time>
                 <div>{{ post.content |truncatehtml | truncatewords: 30 }}</div>
-    		    </a>
-    		  </li>
-    		{% endfor %}
-    		</ul>
-    	</div>
+            </a>
+          </li>
+        {% endfor %}
+        </ul>
+      </div>
       
       <div id="post-pagination">
         {% if paginator.previous_page %}
