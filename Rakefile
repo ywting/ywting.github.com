@@ -63,7 +63,7 @@ task :post do
   puts "Creating new post: #{filename}"
   open(filename, 'w') do |post|
     post.puts "---"
-    post.puts "layout: post"
+    post.puts "layout: post_page"
     post.puts "title: \"#{title.gsub(/-/,' ')}\""
     post.puts 'description: ""'
     post.puts "category: #{category}"
